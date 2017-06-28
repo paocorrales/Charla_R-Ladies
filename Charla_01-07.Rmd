@@ -1,8 +1,8 @@
 ---
 title: 'R y radares: muchos datos y algunos resultados'
 output:
-  html_notebook: default
   html_document: default
+  html_notebook: default
   pdf_document: default
 ---
 
@@ -107,6 +107,7 @@ Pero en el medio hay una función muy importante, la proyección. Normalmente ve
 Un problema importante es que ggplot es muy lento para traducir los datos y generar el gráfico en coordenadas polares y en particular el geom_tile es es muy ineficiente. Les propongo comentar esa línea y ver la diferencia en el tiempo. También van a ver porque es tán importante la elección del tipo de proyección.
 
 ```{r}
+#Ojo este chunk demora mucho, no se asusten!
 ggplot(subset(vol, elevacion == elev[3] & !is.na(V)), aes(azimut, rango/1000)) + 
   geom_tile(aes(fill = V)) +
   scale_fill_gradient2(low = muted("blue"), high = muted("red")) +
