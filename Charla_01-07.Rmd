@@ -142,7 +142,7 @@ Como vimos mas arriba el radar mide el viento en la dirección paralela al rayo 
 
 Particularmente yo escribí mi propio algoritmo en python principalmente porque necesitaba que fuera mas customizable que los que uno encuentra en la bibliografía (si alguna le interesa python puedo compartirles el código). Este código genera un archivo .csv con la información del viento *promedio* en la región del radar (tanto la magnitud como su dirección) y su variación con la altura, junto con otras variables como la estimación del error al estimar el viento y la cantidad de datos utilizados para esto.
 
-Con esta información cada 10 minutos (o sea entre 120 y 144 archivos para cada día) me propongo analizar las características de la Capa Límite. Voy a mostrarles 2 gráficos que resumen las características mas importantes. Incluyo el código y los gráficos pero en este caso no tendrán los archivos de datos para probar porque son muchos!. Si alguna está interesada se los paso!
+Con esta información cada 10 minutos (o sea entre 120 y 144 archivos para cada día) me propongo analizar las características de la Capa Límite. Voy a mostrarles 2 gráficos que resumen las características mas importantes. 
 
 El siguiente código me permite leer todos los archivos juntos y armar el dataframe. En este caso no necesito ordenar la información ya que los .csv los genero yo de acuerdo a lo que necesito.
 
